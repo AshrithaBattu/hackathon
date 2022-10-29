@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Registration
+    </title>
+    <style>
+        @media screen and (max-width :576px) {
+            .container {
+                height: 230svh;
+                background-color: blue;
+            }
+
+            @media screen and (min-width:992px) {
+                .container {
+                    height: 100vh;
+                    background-color: green;
+                }
+            }
+        }
+
+        #intro {
+            background-image: url("https://assets-global.website-files.com/62389e3439ae72a7e2e2988e/6272cf9200ea5c69780bd99d_reserve-hero-image.jpg");
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <script>
+        function validateform() {
+            var name = document.register.id.value;
+            var password = document.register.pwd.value;
+          //  var repassword = document.register.repassword.value;
+            if (name.length == 0) {
+                alert("Username must not be empty!");
+                return false;
+            }
+            // if (password != repassword) {
+            //     alert("Both passwords must be same!");
+            //     return false;
+            // }
+            if (password.length < 8) {
+                alert("Password must be more than 8 characters");
+                return false;
+            }
+            else {
+                // window.location="validationlogin.html";
+                return true;
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+
+<body>
+
+    <body id="intro">
+        </br>
+        <div class="container ">
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <header class="card-header">
+                            <center>
+                                <h4 class="card-title mt-2">Login </h4>
+                            </center>
+                        </header>
+                        <article class="card-body">
+                            <form action="validate.html" method="get" name="register"
+                                onsubmit="return validateform()">
+
+                                <div class="">
+                                    <label>User name</label>
+                                    <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <input type="text" name="id" class="form-control" placeholder="Enter Username">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label>Enter password</label>
+                                    <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        </div>
+                                        <input class="form-control" type="password" name="pwd"
+                                            placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                                </div>
+                            </form>
+                        </article>
+                        <div class="border-top card-body text-center">Are you a new user? <a
+                                href="./registrationboot.html">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        </article>
+    </body>
+
+</html>
